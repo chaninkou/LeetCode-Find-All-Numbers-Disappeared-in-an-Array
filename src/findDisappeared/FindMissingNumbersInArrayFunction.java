@@ -13,8 +13,7 @@ public class FindMissingNumbersInArrayFunction {
 		for (int i = 0; i < nums.length; i++) {
 			// Since the element can not be bigger than the size of the array
 			// We have to put subtact 1
-			// System.out.println(nums.length);
-			// If the length is 8 and the index could only be 7 or less
+			// Ex: If the length is 8 and the index could only be 7 or less
 			int val = Math.abs(nums[i]) - 1;
 
 			// Mark the number we have seen before with negative
@@ -26,8 +25,7 @@ public class FindMissingNumbersInArrayFunction {
 		// In the second loop, whichever one is not negative, that index + 1 will be the missing numbers
 		// i + 1 cause index starts from 0
 		for (int i = 0; i < nums.length; i++) {
-			// We will start from beginning to end,
-			// We will know which one is missing when that index is positive
+			// The one that is not negative (marked) will be the missing values
 			if (nums[i] > 0) {
 				list.add(i + 1);
 			}
